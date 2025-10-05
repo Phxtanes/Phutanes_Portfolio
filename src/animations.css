@@ -1,0 +1,80 @@
+/* === Animations & Micro-interactions (additive stylesheet) === */
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover micro-interactions */
+.button-cta, .btn {
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.button-cta:hover, .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Card tilt hover */
+.card-tilt, .card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-tilt:hover, .card:hover {
+  transform: translateY(-8px) rotateZ(-0.5deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Animated gradient text (applies to .text-gradient if present) */
+.text-gradient {
+  background: linear-gradient(90deg, #436BB7, #7B9DF2, #E27AA3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating effect */
+.floaty, [data-floaty] {
+  animation: floaty 4s ease-in-out infinite;
+}
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Ripple effect */
+.ripple { position: relative; overflow: hidden; }
+.ripple .ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background: rgba(255,255,255,0.35);
+  pointer-events: none;
+}
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* Navbar shrink on scroll */
+.navbar { transition: padding .25s ease, box-shadow .25s ease; }
+.navbar.shrink { padding: .4rem 0; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
