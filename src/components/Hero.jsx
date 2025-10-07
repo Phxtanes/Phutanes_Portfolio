@@ -19,10 +19,10 @@ export default function Hero() {
               </h1>
 
               <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-               <a
+              <a
                 className="btn btn-primary btn-lg px-5 py-3 fw-bolder"
-                href="/assets/Phutanes_Trisiri_Resume.pdf"
-                download="Phutanes_Trisiri_Resume.pdf"
+                href="/assets/Phutanes Trisiri - Resume.pdf"
+                download="Phutanes Trisiri - Resume.pdf"
               >
                 <i className="bi bi-download me-2 pr-2" style={{ paddingRight: 10 }}></i>
                 Download Resume

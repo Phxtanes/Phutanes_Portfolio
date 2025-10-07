@@ -81,6 +81,24 @@ export default function App() {
     }
   }, [])
 
+  useEffect(() => {
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = 100;
+
+        if (targetElement) {
+          const top = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  }, []);
+
   return (
     <>
       <Navbar />

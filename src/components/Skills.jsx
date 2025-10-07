@@ -55,13 +55,13 @@ export default function Skills() {
           </div>
 
           {/* 6) Node.js */}
-          <div className="skill-item">
+          {/* <div className="skill-item">
             <div className="skill-icon-wrapper">
               <img src="assets/node-icon.png" width="80" height="80" alt="JavaScript" />
             </div>
             <h4 className="skill-name">Node.js</h4>
             <p className="skill-description">REST APIs, middlewares, basic auth, and tooling</p>
-          </div>
+          </div> */}
 
           {/* 7) PHP */}
           <div className="skill-item">

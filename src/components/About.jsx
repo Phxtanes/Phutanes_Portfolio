@@ -9,7 +9,7 @@ export default function About() {
                 <span className="text-gradient d-inline">About Me</span>
               </h2>
               <p className="lead fw-light mb-4">
-                Computer Science student passionate about creating user-centered digital experiences.
+                Computer Science students are committed and eager to learn, <br />and always ready to improve their abilities.
               </p>
               <p className="text-muted">
                I am currently a Bachelor's degree in Computer Science at the
