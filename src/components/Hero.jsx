@@ -13,29 +13,20 @@ export default function Hero() {
               <div className="badge bg-gradient-primary-to-secondary text-white mb-4">
                 <div className="text-uppercase">Frontend · Backend · Fullstack</div>
               </div>
-              <div className="fs-3 fw-light text-muted">Hi, I'm Phutanes Trisiri</div>
+              <div className="fs-3 fw-light text-muted text-name" style={{ transition: 'all 0.4s ease'}}>Hi, I'm Phutanes Trisiri</div>
               <h1 className="display-3 fw-bolder mb-5">
-                <span className="text-gradient d-inline">Computer Science Student & Developer</span>
+                <span className="text-occupation text-gradient d-inline">Computer Science Student & Developer</span>
               </h1>
 
               <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
               <a
                 className="btn btn-primary btn-lg px-5 py-3 fw-bolder"
                 href="/assets/Phutanes Trisiri - Resume.pdf"
-                download="Phutanes Trisiri - Resume.pdf"
+                download="Phutanes Trisiri - Resume.pdf" style={{ border : 'none' }}
               >
                 <i className="bi bi-download me-2 pr-2" style={{ paddingRight: 10 }}></i>
                 Download Resume
-              </a>
-
-                {/* เปลี่ยนเป็นปุ่มและเรียก modal */}
-                {/* <button
-                  type="button"
-                  className="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                  onClick={() => setShowContact(true)}
-                >
-                  Contact Me <i className="bi bi-arrow-right-short ms-2"></i>
-                </button> */}
+              </a> 
               </div>
             </div>
           </div>

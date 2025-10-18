@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <section className="skills-section">
+    <section  id="skills" className="skills-section">
       <div className="container" style={{ paddingTop: 48 }}>
         <div className="section-header">
           <h2 className="display-5 fw-bolder text-center">
