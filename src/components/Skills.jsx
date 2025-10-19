@@ -114,7 +114,8 @@ export default function Skills() {
               <img src="assets/docker-icon.png" width="100" height="100" alt="JavaScript" />
             </div>
             <h4 className="skill-name">Docker</h4>
-            <p className="skill-description">Containerized dev envs and simple deployments</p>
+            <p className="skill-description">Build local environments with containers instead of traditional tools like XAMPP</p>
+
           </div>
 
           {/* 13) Figma */}

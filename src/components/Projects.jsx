@@ -159,8 +159,8 @@ const PROJECTS = [
 // ---------------- ProjectCard: แสดง Tech เป็นบรรทัดข้อความใต้ desc ----------------
 function ProjectCard({ item }) {
   return (
-    <div className="col-md-6">
-      <div className="card project-card shadow rounded-4 border-0 h-100">
+    <div className="col-md-10">
+      <div className="project-card shadow rounded-4 border-0 h-100">
         <div className="card-body p-0 d-flex align-items-center">
           <div className="p-4">
             <h2 className="fw-bolder">{item.title}</h2>
@@ -186,10 +186,35 @@ function ProjectCard({ item }) {
                   href={item.links.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn btn-github"
+                  className="btn"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.filter = 'brightness(1.08)';
+                    e.currentTarget.style.boxShadow = '0 10px 26px rgba(0,0,0,.18)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.filter = 'none';
+                    e.currentTarget.style.boxShadow = '0 6px 18px rgba(0,0,0,.12)';
+                  }}
+                  style={{
+                    position: 'relative',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '.5rem',
+                    background: '#111',
+                    color: '#fff',
+                    border: 0,
+                    borderRadius: '.75rem',
+                    padding: '.65rem 1.05rem',
+                    letterSpacing: '.2px',
+                    boxShadow: '0 6px 18px rgba(0,0,0,.12)',
+                    textDecoration: 'none',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease', 
+                  }}
                 >
-                  <i className="bi bi-github" /> View on GitHub
+                  <i className="bi bi-github" style={{ fontSize: '1.1rem' }} /> View on GitHub
                 </a>
+
               )}
               {item.links.live && (
                 <a
@@ -214,14 +239,14 @@ function ProjectCard({ item }) {
 export default function Projects() {
   return (
     <section id="projects" className="py-5 bg-light">
-      <div className="container px-5 mb-5">
+      <div className="container-fluid px-5 mb-5"> 
         <div className="text-center mb-5">
           <h1 className="display-5 fw-bolder mb-0">
             <span className="text-gradient d-inline">Projects & Experience</span>
           </h1>
         </div>
 
-        <div className="row gx-5 gy-5">
+        <div className="row gx-5 gy-5 justify-content-center">
           {PROJECTS.map((item, idx) => (
             <Fragment key={item.id}>
               <ProjectCard item={item} />
