@@ -29,8 +29,8 @@ const PROJECTS = [
     id: 'p3',
     title: (
       <>
-        Disabled Persons Employment Report Submission System -
-        <span className="thai-font"> ระบบส่งรายงานการจ้างงานคนพิการ (Government)</span>
+        Employment report submission system -
+        <span className="thai-font"> ระบบส่งรายงานการจ้างงาน (Government)</span>
       </>
     ),
     desc:

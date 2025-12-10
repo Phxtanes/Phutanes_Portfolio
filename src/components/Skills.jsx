@@ -109,14 +109,14 @@ export default function Skills() {
           </div>
 
           {/* 12) Docker */}
-          <div className="skill-item">
+          {/* <div className="skill-item">
             <div className="skill-icon-wrapper">
               <img src="assets/docker-icon.png" width="100" height="100" alt="JavaScript" />
             </div>
             <h4 className="skill-name">Docker</h4>
             <p className="skill-description">Build local environments with containers instead of traditional tools like XAMPP</p>
 
-          </div>
+          </div> */}
 
           {/* 13) Figma */}
           <div className="skill-item">
@@ -129,7 +129,7 @@ export default function Skills() {
         </div>
 
         {/* Soft Skills */}
-        <div className="soft-skills-section">
+        {/* <div className="soft-skills-section">
           <h3 className="skills-category-title">Soft Skills</h3>
           <div className="soft-skills-grid">
             {[
@@ -148,7 +148,7 @@ export default function Skills() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
