@@ -20,13 +20,14 @@ export default function Hero() {
 
               <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
               <a
+                href={`${import.meta.env.BASE_URL}assets/Phutanes_Trisiri_Resume.pdf`}
+                download="Phutanes_Trisiri_Resume.pdf"
                 className="btn btn-primary btn-lg px-5 py-3 fw-bolder"
-                href="/assets/Phutanes Trisiri - Resume.pdf"
-                download="Phutanes Trisiri - Resume.pdf" style={{ border : 'none' }}
+                style={{ border: "none" }}
               >
-                <i className="bi bi-download me-2 pr-2" style={{ paddingRight: 10 }}></i>
+                <i className="bi bi-download me-2" style={{ paddingRight: 10 }} />
                 Download Resume
-              </a> 
+              </a>
               </div>
             </div>
           </div>
